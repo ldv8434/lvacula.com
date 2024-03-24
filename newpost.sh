@@ -74,7 +74,7 @@ title = "$post_name"
 # description = ""
 date = $year-$month-$day
 # updated = $year-$month-$day
-draft = true
+#draft = true
 [taxonomies]
 tags = [$shortnotestag]
 +++

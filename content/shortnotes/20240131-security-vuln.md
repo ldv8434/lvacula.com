@@ -3,7 +3,6 @@ title = "20240131"
 # description = ""
 date = 2024-01-31
 # updated = 2024-01-31
-draft = true
 [taxonomies]
 tags = ["shortnotes"]
 +++

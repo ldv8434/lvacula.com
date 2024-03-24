@@ -3,7 +3,6 @@ title = "Trying Out FSRS"
 # description = ""
 date = 2024-01-15
 # updated = 2024-01-15
-draft = true
 [taxonomies]
 tags = ["shortnotes"]
 +++
