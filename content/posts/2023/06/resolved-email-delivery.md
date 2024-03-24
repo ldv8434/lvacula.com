@@ -13,7 +13,7 @@ The solution provided by Google is to use a Google Workspace email instead. I gu
 
 ---
 
-For anyone who’s curious, here’s what Google has to say about the matter [on their help page](https://support.google.com/domains/answer/3251241?hl=en#zippy=%2Cemail-forwarding-delivery-issues-from-sender):
+For anyone who’s curious, here’s what Google has to say about the matter [on their help page](https://support.google.com/domains/answer/3251241):
 
 > You may not get the email forwarded to you by senders with specific email authentication settings. Regardless of your mail settings in Google Domains, some email senders have rules that prevent their mail from being delivered with email forwarding systems.  
 > 
