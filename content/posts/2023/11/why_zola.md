@@ -39,4 +39,7 @@ My new solution (and latest accomplishment on the "I did something cool!" list) 
 2. Build the website if new commits exist
 3. Push the build if it succeeds. 
 It's my first time using any kind of CI/CD and it's been an ordeal, but I have it working. 
-We'll see where it goes from here!
+
+As for why Zola?  
+Rust.  
+Just Rust.
