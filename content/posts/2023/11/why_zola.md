@@ -2,7 +2,7 @@
 title = "Why I moved from Wordpress to Zola"
 date = 2023-11-21
 [taxonomies]
-tags= ["shortnotes"]
+tags= ["meta","zola","wordpress"]
 +++
 
 I've used a few different site generators and blogging platforms over the years, including but not limited to:
