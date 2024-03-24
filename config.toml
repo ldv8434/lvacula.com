@@ -72,7 +72,8 @@ thumbnail_sizes = [128, 256]
 # link_instagram_username = ""
 
 menu_links = [
-    { url = "$BASE_URL/", name = "About" },
+    { url = "$BASE_URL", name = "Home" },
+    { url = "$BASE_URL/about/", name = "About" },
     { url = "$BASE_URL/posts/", name = "Posts" },
     { url = "$BASE_URL/tags/", name = "Tags" },
     # { url = "https://github.com/jimmyff/zola-inky", name = "Github" },

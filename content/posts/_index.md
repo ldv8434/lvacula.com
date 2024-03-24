@@ -1,9 +1,9 @@
 +++
-title = "Example posts"
+title = "Posts"
 sort_by = "date"
 template = "posts.html"
 page_template = "post.html"
 transparent = true
 +++
 
-Posts
+A reverse-chronological list of posts.

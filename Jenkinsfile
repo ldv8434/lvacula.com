@@ -11,12 +11,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Hello World'
-                sh 'ls public'
                 sshagent(credentials: ['d82f9436-4c96-44c2-9ed3-b21481e7b742']) {
                       sh '''
                        [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh
                         ssh-keyscan -t rsa,dsa lvacula.com >> ~/.ssh/known_hosts
-                      rsync -avz -e "ssh -o StrictHostKeyChecking=no" public/. greywolver@lvacula.com:lvacula.com-docker/volumes/blog
+                      rsync -az -e "ssh -o StrictHostKeyChecking=no" public/. greywolver@lvacula.com:lvacula.com-docker/volumes/blog
                       '''
                    }
             }
