@@ -14,6 +14,7 @@ post_name="$year$month$day"
 OPTSTRING=":n:s"
 
 shortnotestag=""
+shortnote=false
 
 # Get options 
 while getopts ${OPTSTRING} opt; do
@@ -33,6 +34,7 @@ while getopts ${OPTSTRING} opt; do
 			;;
 		?)
 			echo "-n <name> :: post name"
+			echo "-s        :: create post as shortnote"
 			exit 1
 			;;
 	esac
@@ -44,7 +46,7 @@ post_file_name=$(echo $post_name | sed "s/[ _]/-/g" | tr '[:upper:]' '[:lower:]'
 
 post_path="$posts_root/$post_file_name"
 
-if [ $shortnote == false ] ; then
+if [[ $shortnote == false ]] ; then
 	# Verify year path
 	if ! [ -d $posts_root/$year ]; then
 		# Create new year 
@@ -59,9 +61,11 @@ if [ $shortnote == false ] ; then
 		cp $posts_root/2023/_index.md $posts_root/$year/$month/_index.md
 	fi
 
-	post_path="$posts_root/$year/$month/$posts_file_name"
+	post_path="$posts_root/$year/$month/$post_file_name"
 fi
 
+echo $post_file_name
+echo $post_path
 
 # Create folder for post (in case of images)
 mkdir -p "$post_path"
