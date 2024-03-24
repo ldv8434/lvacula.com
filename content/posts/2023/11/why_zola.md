@@ -1,7 +1,6 @@
 +++
 title = "Why I moved from Wordpress to Zola"
 date = 2023-11-21
-draft = true
 [taxonomies]
 tags= ["shortnotes"]
 +++
