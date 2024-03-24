@@ -75,6 +75,7 @@ menu_links = [
     { url = "$BASE_URL", name = "Home" },
     { url = "$BASE_URL/about/", name = "About" },
     { url = "$BASE_URL/posts/", name = "Posts" },
+    { url = "$BASE_URL/shortnotes/", name = "Shortnotes" },
     { url = "$BASE_URL/tags/", name = "Tags" },
     # { url = "https://github.com/jimmyff/zola-inky", name = "Github" },
 	{ url = "$BASE_URL/contact/", name = "Contact" },
