@@ -1,6 +1,6 @@
 +++
 title = "Why I moved from Wordpress to Zola"
-date = 2023-11-18
+date = 2023-11-21
 draft = true
 [taxonomies]
 tags= ["shortnotes"]
@@ -15,31 +15,37 @@ I've used a few different site generators and blogging platforms over the years,
 - DokuWiki (it counts too!)
 - Zola
 
-Each one comes with benefits and trade-offs. 
-That should go without saying. 
+It should go without saying that every system has its benefits and trade-offs. 
 This post about the *specific* trade-offs that made me switch from Wordpress to Zola. 
 
-The first and most important was the writing. 
-The topics that I like to write about often warrant the use of `monospace text` to denote commands and code. 
-Inline monospace is fine, but both the block and classic editors fail at making blocks easy to insert.
-Combined with the annoyances around making a simple table was enough for me to look elsewhere. 
+My primary issue with Wordpress is the writing. 
+Gutenberg seems like it would be a very useful editor for a more traditional writer or someone who doesn't have an emphasis on technical content.
+I couldn't figure out how to easily move from extended code blocks back to normal writing without using my mouse to add a new paragraph block.
+(The classic editor doesn't fix this issue.)
+With static site generator that rely on Markdown syntax for formatting (like Zola), it's as simple as adding a few backticks at the start and end.
+I write enough code or `general monospace text` that this was a dealbreaker for me.
 
-The second major problem was customization. 
-Wordpress *thrives* on being customized.
-Unfortuantely, it is also a pain to customize. 
-I'm not a web developer and I don't want to learn a subset of PHP to get my link colors to look right with my color scheme. 
+The second major issue was the difficulties I had in customizing the site. 
+This isn't an issue of Wordpress lacking customization - Wordpress themes are popular enough for entire businesses to be built upon the back of them.
+Unfortunately, the graphical editor wasn't behaving for me (primarily not reliably changing link colors to those in my color scheme) and the code side is its own monster.
+I don't want to become a web developer to get my theming working.
+Zola's Tera templates only require a bit more than basic HTML and CSS.
 
-So why didn't I immediately move after making the blog? 
-Because I wanted to have the "write from anywhere" ability that Wordpress offered, while keeping ownership over the website. 
-Tumblr and Blogger let you write from anywhere, but come with a lot of caveats for custom domains (or general usage). 
-On the other hand, Pelican and Zola allow you full control over nearly every aspect, but you'd need to be able to build and deploy the website to a specific place from anywhere.
+Of course, there's downsides to moving to Zola. 
+The largest trade-off - and the reason that I waited so long to do so - is that there are extra steps to deploying the website. 
+Wordpress is as simple as "write the content and hit publish". 
+Zola requires you to have the Zola binary, compile the website, and push the content to the web server host. 
+You can simplify this by writing your content on the same host as the web server, but then you lose the ability to write and publish from anywhere. 
+In my case, it also means losing the ability to use graphical editors. 
 
-My new solution (and latest accomplishment on the "I did something cool!" list) is a Jenkins host to...
-1. Poll for new commits in the repo
-2. Build the website if new commits exist
-3. Push the build if it succeeds. 
-It's my first time using any kind of CI/CD and it's been an ordeal, but I have it working. 
+The solution to that trade-off was learning to install and use Jenkins.
+For the unfamiliar: Jenkins is a CI/CD tool. 
+I can write my content on any host, push the "source code" to a git repo, and Jenkins will take care of the rest.
+In theory, Jenkins will detect and push a new version of this site within 3 minutes of a new commit being pushed to the git repo.
+So far this has worked fairly well.
 
-As for why Zola?  
-Rust.  
-Just Rust.
+The final question I can imagine someone may ask is "Lukas, Pelican is a static site generator as well. Why did you move to a different one?"
+The answer is Rust. 
+Zola is written in it.
+I'm learning it and want to use it more.
+If I encounter a bug, I want to be able to fix it.
