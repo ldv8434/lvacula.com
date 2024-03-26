@@ -13,8 +13,8 @@ else
 fi
 
 # Set User
-git config user.name $GIT_USER
-git config user.email $GIT_EMAIL
+git config user.name "$GIT_USER" --replace-all
+git config user.email "$GIT_EMAIL"
 
 # Sanity item
 git config credential.helper cache
