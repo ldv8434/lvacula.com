@@ -8,7 +8,7 @@ date = 2024-04-06
 tags = ["security"]
 +++
 
-Yesterday, a Twitter user going by the name "marsothy" (@splatatouille) posted a thread of tweets about getting caught up in a Discord scam. You can find that thread [linked here](https://twitter.com/splatatouille/status/1776311022506459564) but I'll summarize it here: 
+Yesterday, a Twitter user going by the name "marsothy" (@splatatouille) posted a thread of tweets about getting caught up in a Discord scam. You can find that thread \[linked here\]\(https://twitter.com/splatatouille/status/1776311022506459564\) (link broken) but I'll summarize it here: 
 - a friend's account was compromised
 - scammer poses as friend claiming that Marsothy needs to get in contact with Discord support via a specified Discord account
 - having Marsothy change their Discord account's email address
