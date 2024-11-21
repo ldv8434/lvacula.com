@@ -5,7 +5,7 @@ date = 2024-11-21
 # updated = 2024-11-21
 #draft = true
 [taxonomies]
-tags = []
+tags = ["linux","satellite","ansible"]
 +++
 
 This post outlines a solution I came up with for a recent problem at work: detecting if servers required a reboot after an update. 
