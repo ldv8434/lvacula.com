@@ -3,7 +3,7 @@ title = "needs-reboot, Satellite, and Ansible"
 description = "An explainer on using Ansible within Satellite to detect when a server requires a reboot."
 date = 2024-11-21
 # updated = 2024-11-21
-draft = true
+#draft = true
 [taxonomies]
 tags = []
 +++
