@@ -42,7 +42,7 @@ done
 
 
 # Fix post name for filesystem
-post_file_name=$(echo $post_name | sed "s/[ _]/-/g" | tr '[:upper:]' '[:lower:]')
+post_file_name=$(echo $post_name | sed "s/[ _,]/-/g" | tr '[:upper:]' '[:lower:]')
 
 post_path="$posts_root/$post_file_name"
 
