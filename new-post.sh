@@ -51,14 +51,41 @@ if [[ $shortnote == false ]] ; then
 	if ! [ -d $posts_root/$year ]; then
 		# Create new year 
 		mkdir $posts_root/$year
-		cp $posts_root/2023/_index.md $posts_root/$year/_index.md
+
+		read -r -d '' TEMPLATE << EOF
++++
+title = "$year"
+sort_by = "date"
+template = "posts.html"
+page_template = "post.html"
+transparent = true
++++
+
+Posts
+
+EOF
+
+		echo "$TEMPLATE" >> $posts_root/$year/_index.md
 	fi
 
 	# Verify month path
 	if ! [ -d $posts_root/$year/$month ]; then
 		# Create new year
 		mkdir $posts_root/$year/$month
-		cp $posts_root/2023/_index.md $posts_root/$year/$month/_index.md
+		read -r -d '' TEMPLATE << EOF
++++
+title = "$year-$month"
+sort_by = "date"
+template = "posts.html"
+page_template = "post.html"
+transparent = true
++++
+
+Posts
+
+EOF
+
+		echo "$TEMPLATE" >> $posts_root/$year/$month/_index.md
 	fi
 
 	post_path="$posts_root/$year/$month/$post_file_name"
